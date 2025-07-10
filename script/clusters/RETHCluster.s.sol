@@ -41,7 +41,7 @@ contract RETHCluster is ManageClusterBase, AddressesUnichain {
         cluster.configFlags = 0;
 
         // Oracle providers
-        cluster.oracleProviders[rETH] = vm.toString(RETH_ORACLE_ADAPTER); // address(0) for now
+        cluster.oracleProviders[rETH] = vm.toString(RETH_ORACLE_ADAPTER);
         cluster.oracleProviders[WETH] = vm.toString(WETH_ORACLE_ADAPTER);
 
         // Supply caps: 5000 rETH, unlimited WETH
