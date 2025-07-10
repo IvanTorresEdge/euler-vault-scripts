@@ -35,8 +35,9 @@ forge clean && forge compile
 ### 2. Calculate IRM Parameters (Already Done)
 
 The WETH vault uses these pre-calculated IRM parameters:
-- Base=0% APY, Slope1=4% APY/util%, Kink=90%, Slope2=100% APY/util%
-- Values: `[0, 295071094, 71401597, 38654705]`
+- Base=0% APY, Slope1=3.29% APY/util%, Kink=90%, Slope2=100% APY/util%
+- At 90% utilization: 2.96% APY (matches ETH staking rate)
+- Values: `[0, 242621753, 71877928, 38654705]`
 
 ### 3. Testing Phase
 

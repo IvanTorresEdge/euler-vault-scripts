@@ -54,8 +54,9 @@ contract RETHCluster is ManageClusterBase, AddressesUnichain {
 
         // IRM parameters - only WETH needs IRM (rETH not borrowable)
         {
-            // Base=0% APY, Slope1=4% APY/util%, Kink=90%, Slope2=100% APY/util%
-            uint256[4] memory irmWETH = [uint256(0), uint256(295071094), uint256(71401597), uint256(38654705)];
+            // Base=0% APY, Slope1=3.29% APY/util%, Kink=90%, Slope2=100% APY/util%
+            // At 90% utilization: 2.96% APY (matches ETH staking rate)
+            uint256[4] memory irmWETH = [uint256(0), uint256(242621753), uint256(71877928), uint256(38654705)];
             cluster.kinkIRMParams[WETH] = irmWETH;
         }
 
