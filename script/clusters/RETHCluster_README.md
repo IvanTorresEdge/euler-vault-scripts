@@ -117,6 +117,11 @@ The deployment will:
 - **Cross-vault LTV**: 98% borrow, 97% liquidation
 - **Ramp Duration**: 24 hours
 
+### Contract Addresses
+- **Factory**: 0xbAd8b5BDFB2bcbcd78Cc9f1573D3Aad6E865e752
+- **rETH Token**: address(0) - TODO: Update once rETH is deployed on Unichain
+- **WETH Token**: 0x4200000000000000000000000000000000000006
+
 ### Governance
 - **Governor**: 0x4f894Bfc9481110278C356adE1473eBe2127Fd3C
 - **Fee Receiver**: Same as governor
