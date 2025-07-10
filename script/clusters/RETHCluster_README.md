@@ -120,7 +120,7 @@ The deployment will:
 
 ### Contract Addresses
 - **Factory**: 0xbAd8b5BDFB2bcbcd78Cc9f1573D3Aad6E865e752
-- **rETH Token**: address(0) - TODO: Update once rETH is deployed on Unichain
+- **rETH Token**: 0x94Cac393f3444cEf63a651FfC18497E7e8bd036a
 - **WETH Token**: 0x4200000000000000000000000000000000000006
 
 ### Governance
