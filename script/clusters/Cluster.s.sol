@@ -4,9 +4,9 @@ pragma solidity ^0.8.0;
 
 import {ManageClusterBase} from "evk-periphery-scripts/production/ManageClusterBase.s.sol";
 import {OracleVerifier} from "evk-periphery-scripts/utils/SanityCheckOracle.s.sol";
-import "./AddressesUnichain.s.sol";
+import "./Addresses.s.sol";
 
-contract RETHCluster is ManageClusterBase, AddressesUnichain {
+contract Cluster is ManageClusterBase, Addresses {
     function defineCluster() internal override {
         cluster.clusterAddressesPath = "/output/1301/RETHCluster.json";
 
@@ -65,10 +65,10 @@ contract RETHCluster is ManageClusterBase, AddressesUnichain {
         cluster.spreadLTV = 0.01e4; // 1% spread between borrow and liquidation LTV
 
         // LTV matrix: rETH collateral can borrow WETH at 97% liquidation LTV
+        // Matrix is [borrowVault][collateralVault] - assets = [rETH, WETH]
         cluster.ltvs = [
-            // [WETH vault] [rETH vault]
-            [uint16(0.97e4), uint16(0.00e4)],  // rETH collateral can borrow WETH at 97% LTV
-            [uint16(0.00e4), uint16(0.00e4)]   // WETH collateral can't borrow anything
+            [uint16(0.00e4), uint16(0.00e4)],  // rETH vault: no borrowing allowed
+            [uint16(0.97e4), uint16(0.00e4)]   // WETH vault: can borrow using rETH collateral at 97% LTV
         ];
     }
 
