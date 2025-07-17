@@ -155,5 +155,5 @@ The deployment will:
 
 - Always run `--dry-run` first to validate configuration
 - The rETH oracle is currently set to address(0) - update when RedStone provides adapter
-- This deployment is for Unichain mainnet (chain ID 1301)
-- Keep the generated output/1301/RETHCluster.json file for future reference
+- This deployment is for Unichain mainnet (chain ID 130)
+- Keep the generated output/130/RETHCluster.json file for future reference

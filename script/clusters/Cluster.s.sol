@@ -8,7 +8,7 @@ import "./Addresses.s.sol";
 
 contract Cluster is ManageClusterBase, Addresses {
     function defineCluster() internal override {
-        cluster.clusterAddressesPath = "/output/1301/RETHCluster.json";
+        cluster.clusterAddressesPath = "/output/130/Cluster.json";
 
         // rETH vault for deposits, WETH vault for borrowing
         cluster.assets = [
