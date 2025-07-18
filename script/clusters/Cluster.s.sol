@@ -30,7 +30,7 @@ contract Cluster is ManageClusterBase, Addresses {
         cluster.interestFee = 0.1e4;
 
         // Liquidation parameters from requirements
-        cluster.maxLiquidationDiscount = 0.10e4; // 10%
+        cluster.maxLiquidationDiscount = 0.1e4; // 10%
         cluster.liquidationCoolOffTime = 3; // 3 seconds (3 blocks)
 
         // No hooks needed
