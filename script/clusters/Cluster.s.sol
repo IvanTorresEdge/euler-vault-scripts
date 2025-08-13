@@ -54,9 +54,9 @@ contract Cluster is ManageClusterBase, Addresses {
 
         // IRM parameters - only WETH needs IRM (rETH not borrowable)
         {
-            // Base=0% APY, Slope1=3.29% APY/util%, Kink=90%, Slope2=100% APY/util%
-            // At 90% utilization: 2.96% APY (matches ETH staking rate)
-            uint256[4] memory irmWETH = [uint256(0), uint256(242621753), uint256(71877928), uint256(38654705)];
+            // At 90% utilization: 2.96% borrow APY, 2.4% supply APY after 10% fee
+            // Command: node lib/evk-periphery/script/utils/calculate-irm-linear-kink.js supply 0 2.4 100 90 10 
+            uint256[4] memory irmWETH = [uint256(0), uint256(239371724), uint256(52975950261), uint256(3865470566)];
             cluster.kinkIRMParams[WETH] = irmWETH;
         }
 
