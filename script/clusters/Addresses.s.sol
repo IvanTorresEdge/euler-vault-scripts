@@ -11,5 +11,5 @@ abstract contract Addresses {
     
     // Oracle adapters
     address internal constant WETH_ORACLE_ADAPTER = 0xF5C2DfD1740D18aD7cf23FBA76cc11d877802937;
-    address internal constant RETH_ORACLE_ADAPTER = 0x48b2f620a0D9768f510DaB4347355b89F3C60886;
+    address internal constant RETH_ORACLE_ADAPTER = 0xFaDD663Db28D5AC846bc1c501dEc28054E08EC4e;
 }
