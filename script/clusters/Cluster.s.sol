@@ -61,14 +61,15 @@ contract Cluster is ManageClusterBase, Addresses {
         }
 
         // LTV configuration
-        cluster.rampDuration = 1 days; // 24 hours
+        cluster.rampDuration = 1 days;
         cluster.spreadLTV = 0.01e4; // 1% spread between borrow and liquidation LTV
 
         // LTV matrix: rETH collateral can borrow WETH at 97% liquidation LTV
-        // Matrix is [borrowVault][collateralVault] - assets = [rETH, WETH]
+        // Matrix structure: rows = collateral assets, columns = debt assets
+        // Assets array: [rETH, WETH] (index 0 = rETH, index 1 = WETH)
         cluster.ltvs = [
-            [uint16(0.00e4), uint16(0.00e4)],  // rETH vault: no borrowing allowed
-            [uint16(0.97e4), uint16(0.00e4)]   // WETH vault: can borrow using rETH collateral at 97% LTV
+            [uint16(0.00e4), uint16(0.98e4)],  // rETH collateral: can borrow WETH at 98% LTV (Liquidation LTV = 97%)
+            [uint16(0.00e4), uint16(0.00e4)]   // WETH collateral: no borrowing allowed
         ];
     }
 
